@@ -1,8 +1,8 @@
 package com.mengka.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,14 +20,14 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/mk")
 public class MengkaController {
 
-    private static final Logger log = LoggerFactory.getLogger(MengkaController.class);
+    static final Logger logger = LogManager.getLogger(MengkaController.class);
 
 
     @RequestMapping(value = "/topic.do", method = { RequestMethod.GET, RequestMethod.POST })
     public String topic(ModelMap map, HttpServletRequest request,
                         @RequestParam(required = false) String groupName) {
-        log.error("--------, a view of topic.vm..");
-        log.info("--------, #megnka# info ..");
+        logger.error("--------, a view of topic.vm..");
+        logger.info("--------, #megnka# info ..");
         return "mengka/topic";
     }
 
@@ -52,7 +52,7 @@ public class MengkaController {
             map.put("result",jsonObject.toJSONString());
         }
         catch (Throwable e) {
-            log.error("saveTopic.do error! ",e);
+            logger.error("saveTopic.do error! ",e);
         }
         return "mengka/success";
     }

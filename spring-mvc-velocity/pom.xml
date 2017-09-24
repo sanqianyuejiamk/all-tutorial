@@ -4,11 +4,11 @@
     <groupId>com.mengka.mvc</groupId>
     <artifactId>spring_mvc_velocity</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <java.version>1.6</java.version>
         <spring.version>3.1.1.RELEASE</spring.version>
-        <logback.version>1.0.13</logback.version>
     </properties>
 
     <dependencies>
@@ -28,14 +28,9 @@
             <version>1.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>${logback.version}</version>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.6.1</version>
         </dependency>
         <dependency>
             <groupId>com.mengka.usercenter</groupId>
