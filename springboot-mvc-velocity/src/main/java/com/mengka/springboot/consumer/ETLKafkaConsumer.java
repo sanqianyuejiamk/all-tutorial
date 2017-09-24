@@ -1,7 +1,7 @@
 package com.mengka.springboot.consumer;
 
 import com.mengka.springboot.manager.MengkaManager;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,8 +13,8 @@ import org.springframework.stereotype.Service;
  * Date: 2016/11/26
  * Time: 14:08
  */
+@Log4j2
 @Service
-@Slf4j
 public class ETLKafkaConsumer extends AbstractConsumer implements InitializingBean {
 
     @Value("${kafka.etl.zookeeperconnect}")

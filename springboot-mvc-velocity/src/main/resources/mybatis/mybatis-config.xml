@@ -8,7 +8,7 @@
     <setting name="defaultExecutorType" value="REUSE" />
     <setting name="mapUnderscoreToCamelCase" value="true" />
 
-    <!--<setting name="logImpl" value="LOG4J2" />-->
+    <setting name="logImpl" value="LOG4J2" />
 </settings>
 
 </configuration>
