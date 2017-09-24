@@ -1,6 +1,7 @@
 package com.mengka.springboot.consumer;
 
 import com.mengka.springboot.util.TimeUtil;
+import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;
@@ -11,7 +12,7 @@ import java.util.Date;
  * Date: 2016/11/26
  * Time: 14:03
  */
-@Slf4j
+@Log4j2
 public abstract class AbstractConsumer extends Thread {
 
     @Override
