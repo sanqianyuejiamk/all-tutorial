@@ -3,7 +3,7 @@
 <!-- monitorInterval表示检测更改配置的时间,单位是秒,最小间隔为5秒,0或负数表示不检测 -->
 <Configuration status="WARN" monitorInterval="1800">
     <properties>
-        <property name="LOG_HOME">/Users/hyy044101331/logs/springboot-mvc-velocity</property>
+        <property name="LOG_HOME">${sys:logging.path}</property>
         <property name="FILE_NAME">spring-mvc</property>
     </properties>
     <Appenders>
