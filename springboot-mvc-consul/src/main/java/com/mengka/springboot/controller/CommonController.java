@@ -5,8 +5,10 @@ import com.mengka.springboot.dao.persistence.BookDOMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import java.util.Map;
 
 /**
@@ -23,10 +25,15 @@ public class CommonController {
     @Autowired
     private BookDOMapper bookDOMapper;
 
+    @Value("${kafka.etl.zookeeperconnect}")
+    private String zookeeperconnect;
+
     @RequestMapping("/rate")
-    public String product(Map<String, Object> model, Long id){
-        logger.info("CommonController rate id = {}",id);
-        model.put("list",null);
+    public String product(Map<String, Object> model, Long id) {
+        logger.info("CommonController rate id = {}", id);
+        model.put("list", null);
+
+        logger.info("--------, zookeeperconnect = " + zookeeperconnect);
 
         //add
         BookDO bookDO = new BookDO();
@@ -34,7 +41,7 @@ public class CommonController {
         bookDO.setPrice(100);
         bookDO.setTenantId("2001");
         bookDOMapper.insert(bookDO);
-        logger.info("CommonController add a new book! id = {}",bookDO.getId());
+        logger.info("CommonController add a new book! id = {}", bookDO.getId());
 
         return "product_rate";
     }

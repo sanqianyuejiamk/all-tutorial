@@ -27,4 +27,5 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         configurer.defaultContentTypeStrategy(new PathExtensionContentNegotiationStrategy());
         configurer.ignoreAcceptHeader(true);
     }
+
 }
