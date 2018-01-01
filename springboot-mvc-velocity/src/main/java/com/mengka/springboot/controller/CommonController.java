@@ -2,6 +2,7 @@ package com.mengka.springboot.controller;
 
 import com.mengka.springboot.dao.domain.BookDO;
 import com.mengka.springboot.dao.persistence.BookDOMapper;
+import com.mengka.springboot.manager.SysMapRegionManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,9 @@ public class CommonController {
     @Autowired
     private BookDOMapper bookDOMapper;
 
+    @Autowired
+    private SysMapRegionManager sysMapRegionManager;
+
     @RequestMapping("/rate")
     public String product(Map<String, Object> model, Long id){
         logger.info("CommonController rate id = {}",id);
@@ -36,6 +40,14 @@ public class CommonController {
         bookDOMapper.insert(bookDO);
         logger.info("CommonController add a new book! id = {}",bookDO.getId());
 
+        return "product_rate";
+    }
+
+    @RequestMapping("/map_01")
+    public String map_01(Map<String, Object> model, Long id){
+        logger.info("CommonController map_01 id = {}",id);
+
+        sysMapRegionManager.initSysMapRegionData();
         return "product_rate";
     }
 }
