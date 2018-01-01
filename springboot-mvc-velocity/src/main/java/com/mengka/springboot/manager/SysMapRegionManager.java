@@ -21,6 +21,10 @@ public class SysMapRegionManager {
     @Autowired
     private SysMapRegionDOMapper sysMapRegionDOMapper;
 
+    /**
+     *  中国城市分布样例：https://www.hcharts.cn/mapdata
+     *
+     */
     public void initSysMapRegionData() {
         String path = "/Users/hyy044101331/Documents/中国地图城市数据.json";
         String result = map_01.readAll(path);
