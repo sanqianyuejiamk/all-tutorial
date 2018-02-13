@@ -35,6 +35,9 @@ import org.springframework.context.annotation.PropertySource;
  *
  * 》》扩展JDBC，如果你要对JDBC层有编程的需求，可以通过Druid提供的Filter-Chain机制，很方便编写JDBC层的扩展插件。
  *
+ * 【其他】
+ * https://github.com/sanqianyuejiamk/flexy-pool
+ *
  * Created with IntelliJ IDEA
  * User: huangyy
  * Date: 2016/11/26
