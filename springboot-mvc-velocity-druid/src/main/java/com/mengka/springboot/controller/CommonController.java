@@ -27,6 +27,14 @@ public class CommonController {
     @Autowired
     private SysMapRegionManager sysMapRegionManager;
 
+    /**
+     *  druid代码：
+     * https://github.com/sanqianyuejiamk/druid
+     *
+     * @param model
+     * @param id
+     * @return
+     */
     @RequestMapping("/rate")
     public String product(Map<String, Object> model, Long id){
         logger.info("CommonController rate id = {}",id);
