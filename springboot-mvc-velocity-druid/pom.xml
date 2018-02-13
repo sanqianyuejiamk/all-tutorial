@@ -26,6 +26,7 @@
         <commons.dbcp.version>1.4</commons.dbcp.version>
         <jdbcdslog.version>1.0.6.2</jdbcdslog.version>
         <cglib.version>2.2.2</cglib.version>
+        <fastjson.version>1.2.15</fastjson.version>
     </properties>
     <dependencies>
         <dependency>
@@ -38,12 +39,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
             <version>1.4.0.RELEASE</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -199,6 +194,12 @@
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
             <version>${mybatis-generator-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
     </dependencies>
     <build>
