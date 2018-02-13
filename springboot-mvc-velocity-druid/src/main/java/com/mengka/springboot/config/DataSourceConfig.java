@@ -1,11 +1,11 @@
 package com.mengka.springboot.config;
 
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,11 +32,11 @@ public class DataSourceConfig {
     @Value("${mybatis.config}")
     private String mybatisConfigFileLocation;
 
-    @Bean(name = "dataSource")
+    @Bean(name = "dataSource", initMethod = "init")
     @Primary
-    @ConfigurationProperties(prefix = "jdbc.service.billing.ds")
+    @ConfigurationProperties("spring.datasource.druid")
     public DataSource dataSource() {
-        return DataSourceBuilder.create().build();
+        return DruidDataSourceBuilder.create().build();
     }
 
     @Bean(name = "transactionManager")
