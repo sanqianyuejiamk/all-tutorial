@@ -17,7 +17,7 @@ import com.mengka.springboot.component.StatsdClient;
 public class statsd_01 {
 
     public static void main(String[] args) throws Exception {
-        StatsdClient client = new StatsdClient("statsd.example.com", 8125);
+        StatsdClient client = new StatsdClient("120.26.221.214", 8125);
         // increment by 1
         client.increment("foo.bar.baz");
         // increment by 10
