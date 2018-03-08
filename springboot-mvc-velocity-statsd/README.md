@@ -24,6 +24,7 @@ https://www.digitalocean.com/community/tutorials/how-to-configure-statsd-to-coll
 ### Docker image for Graphite & Statsd
 https://github.com/hopsoft/docker-graphite-statsd<br>
 https://github.com/CastawayLabs/graphite-statsd
+http://rick-hightower.blogspot.com/2015/05/working-with-statsd-and-java.html
 
 ```
 docker run -d\
@@ -70,3 +71,6 @@ https://github.com/indeedeng/java-dogstatsd-client
 
 **other client**
 https://github.com/tim-group/java-statsd-client/issues/21
+
+### 使用graphite和grafana进行应用程序监控
+https://segmentfault.com/a/1190000007540752

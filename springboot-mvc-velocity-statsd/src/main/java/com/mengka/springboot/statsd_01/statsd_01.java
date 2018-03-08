@@ -5,6 +5,11 @@ import com.mengka.springboot.component.StatsdClient;
 /**
  *  https://github.com/etsy/statsd/blob/master/examples/StatsdClient.java
  *
+ *
+ * 》》Logging application metrics with StatsD：
+ * http://blog.mirajavora.com/logging-custom-metrics-with-statsd/
+ *
+ *
  * @author huangyy
  * @version cabbage-forward2.0,2018-03-08
  * @since cabbage-forward2.0
