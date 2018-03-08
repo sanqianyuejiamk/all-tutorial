@@ -22,7 +22,7 @@ https://www.digitalocean.com/community/tutorials/how-to-configure-statsd-to-coll
 ```
 
 ### Docker image for Graphite & Statsd
-https://github.com/hopsoft/docker-graphite-statsd
+https://github.com/hopsoft/docker-graphite-statsd<br>
 https://github.com/CastawayLabs/graphite-statsd
 
 ```
@@ -43,3 +43,30 @@ docker run -d\
 * [Graphite](http://graphite.readthedocs.org/en/latest/) - front-end dashboard
 * [Carbon](http://graphite.readthedocs.org/en/latest/carbon-daemons.html) - back-end
 * [Statsd](https://github.com/etsy/statsd/wiki) - UDP based back-end proxy
+
+### StatsD Example Clients
+https://github.com/etsy/statsd/tree/master/examples
+
+```
+Etsy/StatsD.pm    - perl module
+perl-example.pl   - perl using Etsy/StatsD module
+StatsdClient.java - JAVA
+csharp_example.cs - C#
+php-example.php   - PHP
+python_example.py - Python
+ruby_example.rb   - Ruby
+statsd.erl        - Erlang
+statsd-client.sh  - Bash
+StatsD.scala      - Scala
+statsd.go         - Go
+StatsdClient.jl   - Julia
+```
+
+#### Java Client
+* java-statsd-client
+https://github.com/tim-group/java-statsd-client
+* java-dogstatsd-client
+https://github.com/indeedeng/java-dogstatsd-client
+
+**other client**
+https://github.com/tim-group/java-statsd-client/issues/21
