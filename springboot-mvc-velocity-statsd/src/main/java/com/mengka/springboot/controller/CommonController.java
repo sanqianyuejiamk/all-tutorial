@@ -2,6 +2,7 @@ package com.mengka.springboot.controller;
 
 import com.mengka.springboot.dao.domain.BookDO;
 import com.mengka.springboot.dao.persistence.BookDOMapper;
+import com.mengka.springboot.manager.CabbageForwardManager;
 import com.mengka.springboot.manager.SysMapRegionManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,6 +28,9 @@ public class CommonController {
     @Autowired
     private SysMapRegionManager sysMapRegionManager;
 
+    @Autowired
+    private CabbageForwardManager cabbageForwardManager;
+
     /**
      *  druid代码：
      * https://github.com/sanqianyuejiamk/druid
@@ -47,6 +51,32 @@ public class CommonController {
         bookDO.setTenantId("2001");
         bookDOMapper.insert(bookDO);
         logger.info("CommonController add a new book! id = {}",bookDO.getId());
+
+        return "product_rate";
+    }
+
+    @RequestMapping("/rate2")
+    public String rate2(Map<String, Object> model, Long id){
+        logger.info("CommonController rate id = {}",id);
+
+        try {
+            cabbageForwardManager.forward();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return "product_rate";
+    }
+
+    @RequestMapping("/rate3")
+    public String rate3(Map<String, Object> model, Long id){
+        logger.info("CommonController rate id = {}",id);
+
+        try {
+            cabbageForwardManager.forward2();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return "product_rate";
     }

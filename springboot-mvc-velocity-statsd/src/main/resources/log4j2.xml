@@ -50,7 +50,7 @@
         </Logger>
 
 
-        <Root level="DEBUG">
+        <Root level="INFO">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="RollingFile"/>
             <appender-ref ref="ERROR" />
