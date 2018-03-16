@@ -1,76 +1,31 @@
-# springboot-mvc-velocity-statsd
+# springboot-mvc-velocity-quasar
 
-## Download
-https://github.com/etsy/statsd/releases
+## quasar开源协程库
 ```
-cp exampleConfig.js Config.js
-nohup node stats.js Config.js &
-```
-
-### How To Configure StatsD to Collect Arbitrary Stats for Graphite
-https://www.digitalocean.com/community/tutorials/how-to-configure-statsd-to-collect-arbitrary-stats-for-graphite-on-ubuntu-14-04
-
-```
-{
-  graphitePort: 2003
-, graphiteHost: "localhost"
-, port: 8125
-, graphite: {
-    legacyNamespace: false
-  }
-}
+<dependency> 
+  <groupId>co.paralleluniverse</groupId> 
+  <artifactId>quasar-core</artifactId> 
+  <version>0.7.6</version> 
+</dependency>
 ```
 
-### Docker image for Graphite & Statsd
-https://github.com/hopsoft/docker-graphite-statsd<br>
-https://github.com/CastawayLabs/graphite-statsd
-http://rick-hightower.blogspot.com/2015/05/working-with-statsd-and-java.html
 
+### javaagent启动参数
+quasar fiber的运行需要织入一些指令，用于调用栈的保存和恢复，quasar提供了三种方式进行织入(AOT、javaagent、ClassLoader)
 ```
-docker run -d\
- --name graphite\
- --restart=always\
- -p 80:80\
- -p 2003-2004:2003-2004\
- -p 2023-2024:2023-2024\
- -p 8125:8125/udp\
- -p 8126:8126\
- hopsoft/graphite-statsd
+jvm启动参数：-javaagent:quasar-core-0.7.6.jar
 ```
 
-#### Includes the following components
-
-* [Nginx](http://nginx.org/) - reverse proxies the graphite dashboard
-* [Graphite](http://graphite.readthedocs.org/en/latest/) - front-end dashboard
-* [Carbon](http://graphite.readthedocs.org/en/latest/carbon-daemons.html) - back-end
-* [Statsd](https://github.com/etsy/statsd/wiki) - UDP based back-end proxy
-
-### StatsD Example Clients
-https://github.com/etsy/statsd/tree/master/examples
-
+### spring boot quasar
 ```
-Etsy/StatsD.pm    - perl module
-perl-example.pl   - perl using Etsy/StatsD module
-StatsdClient.java - JAVA
-csharp_example.cs - C#
-php-example.php   - PHP
-python_example.py - Python
-ruby_example.rb   - Ruby
-statsd.erl        - Erlang
-statsd-client.sh  - Bash
-StatsD.scala      - Scala
-statsd.go         - Go
-StatsdClient.jl   - Julia
+        <dependency>
+            <groupId>co.paralleluniverse</groupId>
+            <artifactId>comsat-spring-boot</artifactId>
+            <version>0.7.0</version>
+        </dependency>
 ```
 
-#### Java Client
-* java-statsd-client
-https://github.com/tim-group/java-statsd-client
-* java-dogstatsd-client
-https://github.com/indeedeng/java-dogstatsd-client
-
-**other client**
-https://github.com/tim-group/java-statsd-client/issues/21
-
-### 使用graphite和grafana进行应用程序监控
-https://segmentfault.com/a/1190000007540752
+```
+mvn clean install
+java -javaagent:../quasar-core-0.7.6.jar -jar spring-boot-1.0-SNAPSHOT-cap.jar
+```

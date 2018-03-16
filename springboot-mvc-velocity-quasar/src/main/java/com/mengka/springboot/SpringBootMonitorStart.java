@@ -1,9 +1,8 @@
 package com.mengka.springboot;
 
+import co.paralleluniverse.springframework.boot.autoconfigure.web.FiberSpringBootApplication;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.actuate.system.ApplicationPidFileWriter;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
@@ -20,7 +19,7 @@ import org.springframework.context.annotation.PropertySource;
  * Date: 2016/11/26
  * Time: 13:36
  */
-@SpringBootApplication
+@FiberSpringBootApplication
 @EnableAutoConfiguration
 @ComponentScan
 @PropertySource("classpath:/properties/datasource.properties")
@@ -28,16 +27,7 @@ import org.springframework.context.annotation.PropertySource;
 public class SpringBootMonitorStart {
 
     public static void main(String[] args) {
-//        String userHome = System.getProperty("user.home");
-//        System.out.println("-------, user.home: " + userHome);
-//
-//        String logPath = System.getProperty("logging.path");
-//        System.out.println("-------, logging.path: " + logPath);
-//
-//        SpringApplication.run(SpringBootMonitorStart.class, args);
+        SpringApplication.run(SpringBootMonitorStart.class, args);
 
-        SpringApplication springApplication = new SpringApplication(SpringBootMonitorStart.class);
-        springApplication.addListeners(new ApplicationPidFileWriter("app.pid"));
-        springApplication.run(args);
     }
 }
