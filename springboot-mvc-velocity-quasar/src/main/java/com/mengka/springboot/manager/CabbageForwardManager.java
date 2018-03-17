@@ -65,7 +65,7 @@ public class CabbageForwardManager {
     }
 
     public void forward2()throws Exception{
-        String url = "http://127.0.0.1:8089/test";
+        String url = "http://127.0.0.1:8053/v1/mq/send";
         //转换成请求参数
         Map<String, Object> param = new HashMap<String, Object>();
 
@@ -73,6 +73,8 @@ public class CabbageForwardManager {
 //        setPostParams(httpPost, param);
 
         final CloseableHttpAsyncClient httpAsyncClient = HttpAsyncClientPool.getInstance().getHttpClient();
+
+        log.info("------, fiber start..");
 
         new Fiber<Void>(new SuspendableRunnable() {
             @Override
@@ -86,7 +88,7 @@ public class CabbageForwardManager {
                         @Override
                         public void completed(HttpResponse response) {
                             log.info("--------, " + response.getStatusLine().getStatusCode());
-                            log.info("--------2222, " + getHttpContent(response));
+//                            log.info("--------2222, " + getHttpContent(response));
                         }
 
                         @Override
@@ -108,7 +110,9 @@ public class CabbageForwardManager {
                     log.error("error!", ex);
                 }
             }
-        }).start().join(5000, TimeUnit.MILLISECONDS);
+        }).start();
+
+        log.info("------, fiber end..");
     }
 
     public static String getHttpContent(HttpResponse response) {
