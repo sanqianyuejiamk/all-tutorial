@@ -25,6 +25,14 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
 /**
+ *
+ * Java Examples for org.apache.http.impl.nio.client.HttpAsyncClients
+ *  https://www.javatips.net/api/org.apache.http.impl.nio.client.httpasyncclients
+ *
+ *  https://www.programcreek.com/java-api-examples/index.php?api=org.apache.http.impl.nio.client.HttpAsyncClients
+ *
+ *  http://book2s.com/java/api/org/apache/http/impl/nio/client/closeablehttpasyncclient/execute-2.html
+ *
  * @author huangyy
  * @version cabbage-forward2.0,2018-03-12
  * @since cabbage-forward2.0
@@ -40,6 +48,10 @@ public class HttpAsyncClientPool {
     private PoolingNHttpClientConnectionManager cm;
 
     private HttpAsyncClientPool() throws IOReactorException {
+        /**
+         * IOReactorConfig常用配置：
+         *  https://www.programcreek.com/java-api-examples/index.php?api=org.apache.http.nio.reactor.ConnectingIOReactor
+         */
         ConnectingIOReactor ioReactor = new DefaultConnectingIOReactor(
                 IOReactorConfig.
                         custom().
