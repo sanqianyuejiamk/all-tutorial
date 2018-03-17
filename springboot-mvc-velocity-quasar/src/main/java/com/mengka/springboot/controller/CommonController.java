@@ -74,6 +74,9 @@ public class CommonController {
 
         try {
             cabbageForwardManager.forward2();
+
+
+            Thread.sleep(60000);
         } catch (Exception e) {
             e.printStackTrace();
         }

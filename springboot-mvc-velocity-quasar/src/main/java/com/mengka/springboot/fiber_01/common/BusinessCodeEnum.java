@@ -1,4 +1,4 @@
-package com.innotek.common.enums;
+package com.mengka.springboot.fiber_01.common;
 
 import lombok.Getter;
 

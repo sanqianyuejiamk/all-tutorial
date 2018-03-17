@@ -1,6 +1,5 @@
-package com.innotek.common.exception;
+package com.mengka.springboot.fiber_01.common;
 
-import com.innotek.common.enums.BusinessCodeEnum;
 import lombok.Getter;
 import java.text.MessageFormat;
 
@@ -11,27 +10,27 @@ import java.text.MessageFormat;
  * @version cabbage-forward2.0,2017-11-1
  * @since cabbage-forward2.0
  */
-public class CabbageForwardException extends RuntimeException {
+public class FooException extends RuntimeException {
 
     private static final long serialVersionUID = -8713779030609284746L;
 
     @Getter
     private String code;
 
-    public CabbageForwardException(String code, String message) {
+    public FooException(String code, String message) {
         super(message);
         this.code = code;
     }
 
-    public CabbageForwardException(String message){
+    public FooException(String message){
         super(message);
     }
 
-    public CabbageForwardException(BusinessCodeEnum businessCodeEnum) {
+    public FooException(BusinessCodeEnum businessCodeEnum) {
         super(businessCodeEnum.getDesc());
     }
 
-    public CabbageForwardException(BusinessCodeEnum businessCodeEnum, String extraMsg) {
+    public FooException(BusinessCodeEnum businessCodeEnum, String extraMsg) {
         super(extraMsg);
         this.code = businessCodeEnum.getCode();
     }
