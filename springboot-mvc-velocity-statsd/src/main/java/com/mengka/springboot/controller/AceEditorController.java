@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Map;
 
 /**
- *  ACE ��һ��ʵ�����﷨��ɫ���ܵĻ��� Web �Ĵ���༭�����������õĴ�����ʾ���ܺʹ��������⣬
- * ������Web������ӵ��һ���༭����ACE�ǲ���ѡ��
+ *  ACE 是一个实现了语法着色功能的基于 Web 的代码编辑器，具有良好的代码提示功能和大量的主题，
+ * 所以在Web端你想拥有一个编辑器，ACE是不二选择
  *
  * @author huangyy
  * @version cabbage-forward2.0,2018-04-02
