@@ -8,6 +8,7 @@ import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
@@ -17,6 +18,9 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Date;
 
 /**
+ * JavaSampleApproach will present to you the principle of this function with SpringBoot.
+ *  http://javasampleapproach.com/spring-framework/spring-batch/use-spring-batch-restartable-function
+ *
  * @author huangyy
  * @version cabbage-forward2.0,2018-05-29
  * @since cabbage-forward2.0
@@ -34,7 +38,7 @@ public class JobConfiguration {
 
     @Bean
     public Step step1() {
-        return stepBuilderFactory.get("step1")
+        return stepBuilderFactory.get("step3")
                 .tasklet(new Tasklet() {
                     @Override
                     public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
@@ -46,8 +50,9 @@ public class JobConfiguration {
                 }).build();
     }
 
+    @Bean
     public Step step2(){
-        return stepBuilderFactory.get("step2")
+        return stepBuilderFactory.get("step4")
                 .tasklet(new Tasklet(){
                     @Override
                     public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception{
@@ -62,7 +67,9 @@ public class JobConfiguration {
     // our batch job
     @Bean
     public Job xmlToJsonToMongo() {
-        return jobBuilderFactory.get("XML_Processor")
+        return jobBuilderFactory.get("XML_Processor1")
+                .preventRestart()
+                .incrementer(new RunIdIncrementer())
                 .start(step1())
                 .next(step2())
                 .build();
