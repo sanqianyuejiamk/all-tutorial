@@ -42,5 +42,8 @@ public class ETLKafkaConsumer extends AbstractConsumer implements InitializingBe
         log.info("ETLKafkaConsumer start.. broker = "+mengkaManager.getBroker());
         log.info("kafka zookeeperconnect = "+zookeeperconnect+" , topic = "+topic+" , consumergrp = "+consumergrp);
         this.start();
+
+
+
     }
 }
