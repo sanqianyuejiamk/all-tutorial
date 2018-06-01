@@ -8,6 +8,7 @@ import org.influxdb.dto.Query;
 import java.util.concurrent.TimeUnit;
 
 /**
+    http://www.baeldung.com/java-influxdb
  *
  *  https://github.com/influxdata/influxdb-java
  */
