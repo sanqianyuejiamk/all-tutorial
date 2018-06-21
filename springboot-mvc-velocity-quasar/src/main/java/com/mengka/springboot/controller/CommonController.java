@@ -3,6 +3,7 @@ package com.mengka.springboot.controller;
 import com.mengka.springboot.dao.domain.BookDO;
 import com.mengka.springboot.dao.persistence.BookDOMapper;
 import com.mengka.springboot.manager.CabbageForwardManager;
+import com.mengka.springboot.manager.LazadaManager;
 import com.mengka.springboot.manager.SysMapRegionManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,8 +32,11 @@ public class CommonController {
     @Autowired
     private CabbageForwardManager cabbageForwardManager;
 
+    @Autowired
+    private LazadaManager lazadaManager;
+
     /**
-     *  druid代码：
+     * druid代码：
      * https://github.com/sanqianyuejiamk/druid
      *
      * @param model
@@ -40,9 +44,9 @@ public class CommonController {
      * @return
      */
     @RequestMapping("/rate")
-    public String product(Map<String, Object> model, Long id){
-        logger.info("CommonController rate id = {}",id);
-        model.put("list",null);
+    public String product(Map<String, Object> model, Long id) {
+        logger.info("CommonController rate id = {}", id);
+        model.put("list", null);
 
         //add
         BookDO bookDO = new BookDO();
@@ -50,14 +54,14 @@ public class CommonController {
         bookDO.setPrice(100);
         bookDO.setTenantId("2001");
         bookDOMapper.insert(bookDO);
-        logger.info("CommonController add a new book! id = {}",bookDO.getId());
+        logger.info("CommonController add a new book! id = {}", bookDO.getId());
 
         return "product_rate";
     }
 
     @RequestMapping("/rate2")
-    public String rate2(Map<String, Object> model, Long id){
-        logger.info("CommonController rate id = {}",id);
+    public String rate2(Map<String, Object> model, Long id) {
+        logger.info("CommonController rate id = {}", id);
 
         try {
             cabbageForwardManager.forward();
@@ -69,8 +73,8 @@ public class CommonController {
     }
 
     @RequestMapping("/rate3")
-    public String rate3(Map<String, Object> model, Long id){
-        logger.info("CommonController rate id = {}",id);
+    public String rate3(Map<String, Object> model, Long id) {
+        logger.info("CommonController rate id = {}", id);
 
         try {
             cabbageForwardManager.forward2();
@@ -85,10 +89,20 @@ public class CommonController {
     }
 
     @RequestMapping("/map_01")
-    public String map_01(Map<String, Object> model, Long id){
-        logger.info("CommonController map_01 id = {}",id);
+    public String map_01(Map<String, Object> model, Long id) {
+        logger.info("CommonController map_01 id = {}", id);
 
         sysMapRegionManager.initSysMapRegionData();
+        return "product_rate";
+    }
+
+    @RequestMapping("/hehe_01")
+    public String hehe_01(Map<String, Object> model, Long id) throws Exception {
+        logger.info("CommonController hehe_01 id = {}", id);
+
+        String url = "https://www.google.com/";
+        lazadaManager.hehe(url);
+
         return "product_rate";
     }
 }
