@@ -33,24 +33,24 @@
     </Appenders>
     <Loggers>
         <!-- print mybatis sql -->
-        <logger name="com.mengka.springboot" level="DEBUG" additivity="false">
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="RollingFile"/>
-            <appender-ref ref="ERROR" />
-        </logger>
+        <!--<logger name="com.mengka.springboot" level="DEBUG" additivity="false">-->
+            <!--<AppenderRef ref="Console"/>-->
+            <!--<AppenderRef ref="RollingFile"/>-->
+            <!--<appender-ref ref="ERROR" />-->
+        <!--</logger>-->
 
-        <Logger name="org.mybatis" level="DEBUG">
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="RollingFile"/>
-        </Logger>
+        <!--<Logger name="org.mybatis" level="DEBUG">-->
+            <!--<AppenderRef ref="Console"/>-->
+            <!--<AppenderRef ref="RollingFile"/>-->
+        <!--</Logger>-->
 
-        <Logger name="java.sql" level="DEBUG">
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="RollingFile"/>
-        </Logger>
+        <!--<Logger name="java.sql" level="DEBUG">-->
+            <!--<AppenderRef ref="Console"/>-->
+            <!--<AppenderRef ref="RollingFile"/>-->
+        <!--</Logger>-->
 
 
-        <Root level="DEBUG">
+        <Root level="INFO">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="RollingFile"/>
             <appender-ref ref="ERROR" />
