@@ -39,8 +39,8 @@ public class ETLKafkaConsumer extends AbstractConsumer implements InitializingBe
     }
 
     public void afterPropertiesSet() throws Exception {
-        log.info("ETLKafkaConsumer start.. broker = "+mengkaManager.getBroker());
-        log.info("kafka zookeeperconnect = "+zookeeperconnect+" , topic = "+topic+" , consumergrp = "+consumergrp);
+        log.debug("ETLKafkaConsumer start.. broker = "+mengkaManager.getBroker());
+        log.debug("kafka zookeeperconnect = "+zookeeperconnect+" , topic = "+topic+" , consumergrp = "+consumergrp);
         this.start();
     }
 }
