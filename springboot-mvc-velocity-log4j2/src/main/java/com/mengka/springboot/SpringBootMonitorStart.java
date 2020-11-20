@@ -43,8 +43,8 @@ public class SpringBootMonitorStart {
      *
      * @return
      */
-    @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate(new HttpComponentsClientHttpRequestFactory());
-    }
+//    @Bean
+//    public RestTemplate restTemplate() {
+//        return new RestTemplate(new HttpComponentsClientHttpRequestFactory());
+//    }
 }
