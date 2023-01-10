@@ -26,7 +26,7 @@
         <commons.dbcp.version>1.4</commons.dbcp.version>
         <jdbcdslog.version>1.0.6.2</jdbcdslog.version>
         <cglib.version>2.2.2</cglib.version>
-        <fastjson.version>1.2.15</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <spring.version>4.2.4.RELEASE</spring.version>
 
         <capsule.version>1.0.2</capsule.version>
