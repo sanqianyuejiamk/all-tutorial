@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Configuration status="OFF" monitorInterval="1800">
     <properties>
-        <property name="LOG_HOME">/Users/hyy044101331/logs/spring-mvc-velocity</property>
+        <property name="LOG_HOME">logs/spring-mvc-velocity</property>
         <property name="FILE_NAME">spring-mvc</property>
     </properties>
     <Appenders>
