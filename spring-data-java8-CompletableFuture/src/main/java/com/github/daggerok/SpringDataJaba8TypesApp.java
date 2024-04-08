@@ -19,6 +19,7 @@ import javax.annotation.PostConstruct;
 import javax.persistence.*;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
@@ -111,6 +112,12 @@ public class SpringDataJaba8TypesApp {
     @GetMapping("/find/{id}")
     public CompletableFuture<Message> findById(@PathVariable String id) {
       return messageRepository.findByMessage(id);
+    }
+
+    @GetMapping("/findbyid/{id}")
+    public Message findById2(@PathVariable String id) {
+      Optional<Message> optional = messageRepository.findById(UUID.fromString(id));
+      return optional.isPresent()?optional.get():null;
     }
 
     @GetMapping("/stream")
