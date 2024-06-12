@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mengka.springsample.mybatis.repository.ItemRepository">
+	<select id="selectItems"
+		parameterType="com.mengka.springsample.mybatis.model.ItemCondition"
+		resultType="com.mengka.springsample.mybatis.model.Item">
+		SELECT
+			id,
+			name,
+			status,
+			display
+		FROM
+			item
+		<where>
+			<if test="display != @com.mengka.springsample.mybatis.model.TrueOrFalse@NONE">
+			 display = #{display.value}
+			</if>
+		</where>
+	</select>
+</mapper>
