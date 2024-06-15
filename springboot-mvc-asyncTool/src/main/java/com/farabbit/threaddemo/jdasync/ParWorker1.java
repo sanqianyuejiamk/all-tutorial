@@ -7,6 +7,7 @@ import com.jd.platform.async.callback.IWorker;
 import com.jd.platform.async.worker.WorkResult;
 import com.jd.platform.async.wrapper.WorkerWrapper;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author wuweifeng wrote on 2019-11-20.
@@ -15,6 +16,12 @@ public class ParWorker1 implements IWorker<String, String>, ICallback<String, St
 
     @Override
     public String action(String s, Map<String, WorkerWrapper> map) {
+        WorkerWrapper workerA = map.get("workerA");
+        System.out.println("获取workerA的结果：" + JSONUtil.toJsonStr(workerA));
+        if (Objects.nonNull(workerA)) {
+            String result = (String)workerA.getWorkResult().getResult();
+            System.out.println("ParWorker1 get result from A: "+result);
+        }
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
