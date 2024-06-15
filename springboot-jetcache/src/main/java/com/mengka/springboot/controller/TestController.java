@@ -45,18 +45,19 @@ public class TestController {
         myService.createCacheDemo();
         //myService.cachedDemo();
 
-        User user1 = userService.loadUser(1001);
+        long userId = 4L;
+        User user1 = userService.loadUser(userId);
 
         User updateUser = new User();
         updateUser.setName("mp444xxx");
-        updateUser.setId(1001L);
+        updateUser.setId(userId);
         userService.updateUser(updateUser);
 
-        User user2 = userService.loadUser(1001);
+        User user2 = userService.loadUser(userId);
 
-        userService.deleteUser(1001L);
+        userService.deleteUser(userId);
 
-        User user3 = userService.loadUser(1001);
+        User user3 = userService.loadUser(userId);
 
         return ResponseEntity.ok("Hello World");
     }
