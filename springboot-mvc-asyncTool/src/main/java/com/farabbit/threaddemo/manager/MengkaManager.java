@@ -32,12 +32,14 @@ public class MengkaManager {
                 .worker(w3)
                 .callback(w3)
                 .param("3")
+                .id("workerD")
                 .build();
 
         WorkerWrapper<String, String> workerWrapper2 =  new WorkerWrapper.Builder<String, String>()
                 .worker(w2)
                 .callback(w2)
                 .param("2")
+                .id("workerC")
                 .next(workerWrapper3)
                 .build();
 
@@ -45,6 +47,7 @@ public class MengkaManager {
                 .worker(w1)
                 .callback(w1)
                 .param("1")
+                .id("workerB")
                 .next(workerWrapper3)
                 .build();
 
@@ -52,6 +55,7 @@ public class MengkaManager {
                 .worker(w)
                 .callback(w)
                 .param("0")
+                .id("workerA")
                 .next(workerWrapper1, workerWrapper2)
                 .build();
 
