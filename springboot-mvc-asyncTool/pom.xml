@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<lombok.version>1.16.4</lombok.version>
 	</properties>
 
 	<dependencies>
@@ -62,7 +63,31 @@
 			<artifactId>disruptor</artifactId>
 			<version>3.4.2</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.gitee.jd-platform-opensource</groupId>
+			<artifactId>asyncTool</artifactId>
+			<version>V1.4-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-json</artifactId>
+			<version>5.8.27</version>
+		</dependency>
+		<!-- util -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>
