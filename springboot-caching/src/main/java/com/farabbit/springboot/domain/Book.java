@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,7 +25,7 @@ import java.util.Map;
 @Accessors(chain = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Book {
+public class Book implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

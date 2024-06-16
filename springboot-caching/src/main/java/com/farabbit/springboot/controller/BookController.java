@@ -4,6 +4,7 @@ import com.farabbit.springboot.domain.Book;
 import com.farabbit.springboot.domain.BookDTO;
 import com.farabbit.springboot.domain.BookReq;
 import com.farabbit.springboot.repository.BookRepository;
+import com.farabbit.springboot.service.BookService;
 import com.farabbit.springboot.transfor.BookTransfer;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
@@ -28,6 +29,9 @@ public class BookController {
 
     @Autowired
     private BookRepository bookRepository;
+
+    @Autowired
+    private BookService bookService;
 
     /**
      *  http://127.0.0.1:8071/book/t1
@@ -59,6 +63,30 @@ public class BookController {
         book63.addFeature("x2","test222");
         book63.addFeature("x3","test333");
         bookRepository.save(book63);
+
+        return "Hello world";
+    }
+
+    /**
+     * http://127.0.0.1:8072/book/t3
+     *
+     *  ./redis-cli
+     *
+     *  127.0.0.1:6379> keys *itemCache*
+     * 1) "itemCache::67"
+     * 2) "itemCache::68"
+     *
+     *
+     * @return
+     */
+    @GetMapping("/t3")
+    public String t3() {
+        log.info("---user--- ");
+
+        Book book63 = bookService.getBookById(68L);
+        log.info("content = {}",book63.getFeature("x1"));
+
+        Book book64 = bookService.getBookById(68L);
 
         return "Hello world";
     }
