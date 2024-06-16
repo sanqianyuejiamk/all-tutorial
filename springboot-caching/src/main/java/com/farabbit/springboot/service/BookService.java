@@ -14,6 +14,13 @@ public class BookService {
     @Autowired
     private BookRepository bookRepository;
 
+    /**
+     *  https://www.baeldung.com/spring-cache-tutorial
+     *  https://github.com/eugenp/tutorials/tree/master/spring-boot-modules/spring-boot-caching-2
+     *
+     * @param id
+     * @return
+     */
     @Cacheable(value = "itemCache", key = "#id")
     public Book getBookById(long id){
         log.info("BookService getBookById id = "+id);
