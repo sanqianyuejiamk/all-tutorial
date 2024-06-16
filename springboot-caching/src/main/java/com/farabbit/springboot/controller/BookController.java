@@ -83,11 +83,21 @@ public class BookController {
     public String t3() {
         log.info("---user--- ");
 
-        Book book63 = bookService.getBookById(68L);
+        Book book = new Book().setName("数学o1").setPrice(100).setTenantId("2001");
+        Book book62 = bookService.insertBook(book);
+
+        long bookId = book62.getId();
+
+        Book book63 = bookService.getBookById(bookId);
         log.info("content = {}",book63.getFeature("x1"));
 
-        Book book64 = bookService.getBookById(68L);
+        Book book64 = bookService.getBookById(bookId);
 
+        bookService.editBook(book64);
+        Book book65 = bookService.getBookById(bookId);
+
+        bookService.removeBookById(bookId);
+        Book book66 = bookService.getBookById(bookId);
         return "Hello world";
     }
 }
