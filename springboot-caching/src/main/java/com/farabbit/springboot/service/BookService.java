@@ -10,6 +10,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -29,6 +30,8 @@ public class BookService {
      *   https://medium.com/simform-engineering/spring-boot-caching-with-redis-1a36f719309f
      *
      *  参考：spring_cache_x03
+     *
+     *  /Users/hyy044101331/work_github/work_demo/spring-boot-redis-example
      *
      * @param id
      * @return
@@ -58,5 +61,25 @@ public class BookService {
     public String removeBookById(long id){
         bookRepository.deleteById(id);
         return "success";
+    }
+
+    @Cacheable("itemCache")
+    public List<Book> findAll() {
+        log.info("-----, findAll..");
+        return bookRepository.findAll();
+    }
+
+    /**
+     *  127.0.0.1:6379> keys *itemCache*
+     * 1) "itemCache::\xe6\x95\xb0\xe5\xad\xa6x1"
+     * 2) "itemCache::SimpleKey []"
+     * 
+     * @param name
+     * @return
+     */
+    @Cacheable("itemCache")
+    public List<Book> findByName(String name) {
+        log.info("-----, findByName..");
+        return bookRepository.findByName(name);
     }
 }

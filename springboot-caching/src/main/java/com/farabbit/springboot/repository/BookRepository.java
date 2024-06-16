@@ -23,6 +23,8 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     List<Book> findByNameAndPriceAndTenantId(String name, Integer price, String tenantId);
 
+    List<Book> findByName(String name);
+
     default int wasteTime() {
         int i = Integer.MIN_VALUE;
         while(i < Integer.MAX_VALUE) {

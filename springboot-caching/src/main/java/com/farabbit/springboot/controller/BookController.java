@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 //import javax.validation.Valid;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author mengka
@@ -98,6 +99,19 @@ public class BookController {
 
         bookService.removeBookById(bookId);
         Book book66 = bookService.getBookById(bookId);
+        return "Hello world";
+    }
+
+    @GetMapping("/t4")
+    public String t4() {
+        log.info("---user--- ");
+
+        List<Book> books = bookService.findAll();
+        log.info("findAll book size = {}",books.size());
+
+        List<Book> books2 = bookService.findByName("数学x1");
+        log.info("findByName book size = {}",books2.size());
+
         return "Hello world";
     }
 }
