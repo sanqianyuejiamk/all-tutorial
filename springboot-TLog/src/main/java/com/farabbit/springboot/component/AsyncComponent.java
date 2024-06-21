@@ -28,6 +28,9 @@ public class AsyncComponent {
         return null;
     }
 
+    /**
+     *  Execute method asynchronously with configured executor mengka-thread-1
+     */
     @Async("threadPoolTaskExecutor")
     public void asyncMethodWithConfiguredExecutor() {
         System.out.println("Execute method asynchronously with configured executor " + Thread.currentThread().getName());

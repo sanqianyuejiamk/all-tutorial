@@ -32,13 +32,13 @@ public class ApplicationStartupRunner implements CommandLineRunner {
         System.out.println("DATASOURCE = " + newds.getMaximumPoolSize());
 
         log.info("Display all customers...");
-        Iterable<Note> noteIterable = noteRepository.findAll();
-//        noteIterable.forEach(x -> System.out.println(x));
-
-        List<Note> notes = Lists.newArrayList(noteIterable);
-
-        //输出包含"test node"标题的Note
-        notes.forEach(x -> println(x));
+//        Iterable<Note> noteIterable = noteRepository.findAll();
+////        noteIterable.forEach(x -> System.out.println(x));
+//
+//        List<Note> notes = Lists.newArrayList(noteIterable);
+//
+//        //输出包含"test node"标题的Note
+//        notes.forEach(x -> println(x));
     }
 
     private void println(Note note){
