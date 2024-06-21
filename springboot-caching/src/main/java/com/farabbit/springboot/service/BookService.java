@@ -73,7 +73,7 @@ public class BookService {
      *  127.0.0.1:6379> keys *itemCache*
      * 1) "itemCache::\xe6\x95\xb0\xe5\xad\xa6x1"
      * 2) "itemCache::SimpleKey []"
-     * 
+     *
      * @param name
      * @return
      */
