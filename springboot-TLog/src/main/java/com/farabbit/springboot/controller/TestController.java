@@ -3,6 +3,7 @@ package com.farabbit.springboot.controller;
 import com.farabbit.springboot.component.AsyncComponent;
 import com.farabbit.springboot.domain.Book;
 import com.farabbit.springboot.repository.BookRepository;
+import com.farabbit.springboot.service.MengkaService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,24 @@ public class TestController {
 
     @Autowired
     private AsyncComponent asyncComponent;
+
+    @Autowired
+    private MengkaService mengkaService;
+
+    /**
+     *  http://127.0.0.1:8071/t1
+     *
+     * @return
+     * @throws InterruptedException
+     * @throws ExecutionException
+     */
+    @GetMapping("t1")
+    public ResponseEntity<String> t1() throws InterruptedException, ExecutionException {
+        log.info("-------, 调用t1接口");
+
+        mengkaService.demo1("044101331","x1");
+        return ResponseEntity.ok("Hello World");
+    }
 
     @GetMapping("testAsync")
     public ResponseEntity<String> testAsync() throws InterruptedException, ExecutionException {

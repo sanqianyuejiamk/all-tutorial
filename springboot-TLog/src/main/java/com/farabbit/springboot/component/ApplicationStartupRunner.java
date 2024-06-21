@@ -29,7 +29,7 @@ public class ApplicationStartupRunner implements CommandLineRunner {
         log.info("DATASOURCE = " + dataSource);
 
         HikariDataSource newds = (HikariDataSource)dataSource;
-        System.out.println("DATASOURCE = " + newds.getMaximumPoolSize());
+        log.info("DATASOURCE = " + newds.getMaximumPoolSize());
 
         log.info("Display all customers...");
 //        Iterable<Note> noteIterable = noteRepository.findAll();

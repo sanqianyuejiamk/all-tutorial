@@ -9,10 +9,10 @@
 	<!--<conversionRule conversionWord="traceLogId" converterClass="com.xinbang.common.logging.converter.TraceLogIdConverter" />-->
 	<!-- 控制台输出 -->
 	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-		<!-- 日志输出编码 -->
-		<layout class="ch.qos.logback.classic.PatternLayout">
+		<!--这里替换成AspectLogbackEncoder-->
+		<encoder class="com.yomahub.tlog.core.enhance.logback.AspectLogbackEncoder">
 			<Pattern>  [%date] [%thread] [%-1level] -%mdc{client}  %c{1} %line %msg %n</Pattern>
-		</layout>
+		</encoder>
 	</appender>
 
 	<!-- 按照每天生成日志文件 -->
@@ -27,9 +27,10 @@
 			<FileNamePattern>${LOG_PATH}/${LOG_NAME}/${LOG_NAME}_%d{yyyy-MM-dd}.log</FileNamePattern>
 			<MaxHistory>7</MaxHistory>
 		</rollingPolicy>
-		<layout class="ch.qos.logback.classic.PatternLayout">
+		<!--这里替换成AspectLogbackEncoder-->
+		<encoder class="com.yomahub.tlog.core.enhance.logback.AspectLogbackEncoder">
 			<Pattern>  [%date] [%thread] [%-1level] -%mdc{client} %c{1} %line %msg%n</Pattern>
-		</layout>
+		</encoder>
 	</appender>
 	<appender name="errorFile"  class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.LevelFilter">
@@ -42,9 +43,10 @@
 			<FileNamePattern>${LOG_PATH}/${LOG_NAME}/${LOG_NAME}_%d{yyyy-MM-dd}_error.log</FileNamePattern>
 			<MaxHistory>7</MaxHistory>
 		</rollingPolicy>
-		<layout class="ch.qos.logback.classic.PatternLayout">
+		<!--这里替换成AspectLogbackEncoder-->
+		<encoder class="com.yomahub.tlog.core.enhance.logback.AspectLogbackEncoder">
 			<Pattern>  [%date] [%thread] [%-1level] -%mdc{client} %c{1} %line %msg%n</Pattern>
-		</layout>
+		</encoder>
 	</appender>
 
 	<logger name="org.jdbcdslog.ConnectionLogger" level="info"/>
