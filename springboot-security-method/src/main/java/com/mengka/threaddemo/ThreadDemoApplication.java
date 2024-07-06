@@ -1,4 +1,4 @@
-package com.farabbit.threaddemo;
+package com.mengka.threaddemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

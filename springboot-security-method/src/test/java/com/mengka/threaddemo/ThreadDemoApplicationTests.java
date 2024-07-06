@@ -1,4 +1,4 @@
-package com.farabbit.threaddemo;
+package com.mengka.threaddemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
