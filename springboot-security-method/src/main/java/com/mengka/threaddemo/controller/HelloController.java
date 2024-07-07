@@ -1,6 +1,7 @@
 package com.mengka.threaddemo.controller;
 
 import com.mengka.threaddemo.domain.Note;
+import com.mengka.threaddemo.repository.NoteRepository;
 import com.mengka.threaddemo.service.NoteService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,7 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Controller
-@RequestMapping("/v1/api")
+@RequestMapping("/api/v1")
 public class HelloController {
 
     private static final Logger logger = LogManager.getLogger(HelloController.class);
@@ -24,6 +25,9 @@ public class HelloController {
 
     @Autowired
     private NoteService noteService;
+
+    @Autowired
+    private NoteRepository noteRepository;
 
     @GetMapping("/")
     public String main(Model model) {
@@ -41,7 +45,7 @@ public class HelloController {
     }
 
     /**
-     *  
+     *
      *  https://www.baeldung.com/spring-security-method-security
      *
      * @param model
@@ -49,6 +53,11 @@ public class HelloController {
      */
     @GetMapping("/t1")
     public ResponseEntity<List<Note>> t1(Model model) {
+        Note note = new Note();
+        note.setTitle("test11");
+        note.setContent("content A");
+        noteRepository.save(note);
+
         List<Note> notes = noteService.findAll();
         return ResponseEntity.ok(notes);
     }
