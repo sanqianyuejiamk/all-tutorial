@@ -12,6 +12,9 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ *  https://www.baeldung.com/spring-security-create-new-custom-security-expression
+ */
 @Controller
 public class MainController {
 

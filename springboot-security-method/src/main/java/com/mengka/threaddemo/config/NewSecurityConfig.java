@@ -15,6 +15,8 @@ public class NewSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
+        http.headers().frameOptions().disable();
+
         http.csrf()
                 .disable()
                 .authorizeRequests()
