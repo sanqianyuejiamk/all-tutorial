@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+	<contextName>service-billing</contextName>
+
+	<property resource="application.properties"/>
+	<property name="LOG_PATH" value="logs"/>
+	<property name="LOG_NAME" value="springboot-demo2"/>
+	<property name="LOG_LEVEL" value="INFO"/>
+	<!--<conversionRule conversionWord="traceLogId" converterClass="com.xinbang.common.logging.converter.TraceLogIdConverter" />-->
+	<!-- 控制台输出 -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- 日志输出编码 -->
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>  [%date] [%thread] [%-1level] -%mdc{client}  %c{1} %line %msg %n</Pattern>
+		</layout>
+	</appender>
+
+	<!-- 按照每天生成日志文件 -->
+	<appender name="normalFile"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>DENY</onMatch>
+			<onMismatch>ACCEPT</onMismatch>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!--日志文件输出的文件名-->
+			<FileNamePattern>${LOG_PATH}/${LOG_NAME}/${LOG_NAME}_%d{yyyy-MM-dd}.log</FileNamePattern>
+			<MaxHistory>7</MaxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>  [%date] [%thread] [%-1level] -%mdc{client} %c{1} %line %msg%n</Pattern>
+		</layout>
+	</appender>
+	<appender name="errorFile"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!--日志文件输出的文件名-->
+			<FileNamePattern>${LOG_PATH}/${LOG_NAME}/${LOG_NAME}_%d{yyyy-MM-dd}_error.log</FileNamePattern>
+			<MaxHistory>7</MaxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>  [%date] [%thread] [%-1level] -%mdc{client} %c{1} %line %msg%n</Pattern>
+		</layout>
+	</appender>
+
+	<logger name="org.jdbcdslog.ConnectionLogger" level="info"/>
+	<logger name="org.jdbcdslog.StatementLogger" level="info" additivity="true"/>
+	<logger name="org.jdbcdslog.ResultSetLogger" level="info" additivity="false"/>
+	<logger name="com.xinbang.credit.trade"><level value="debug" />
+
+	</logger>
+	<!-- 日志输出级别 -->
+	<root level="info">
+		<appender-ref ref="console" />
+		<appender-ref ref="normalFile" />
+		<appender-ref ref="errorFile" />
+		<!--<appender-ref ref="KafkaMonitor" />-->
+		<!--<appender-ref ref="KafkaETL" />-->
+	</root>
+
+</configuration>
