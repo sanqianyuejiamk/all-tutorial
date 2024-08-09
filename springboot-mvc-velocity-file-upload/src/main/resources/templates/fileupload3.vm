@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>Upload Multiple Files Using WebFlux</title>
+</head>
+<body>
+    <form method="post" action="/upload/t4" enctype="multipart/form-data">
+        <input type="file" id="inputFile" name="inputFile"/>
+        <input type="submit" value="Upload"/>
+    </form>
+</body>
+</html>

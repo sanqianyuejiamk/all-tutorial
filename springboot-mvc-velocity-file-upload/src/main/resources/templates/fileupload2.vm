@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title> Java Ajax File Upload Example </title>
+</head>
+<body>
+<!-- HTML5 Input Form Elements -->
+<input id="ajaxfile" type="file"/> <br/>
+<button onclick="uploadFile()"> Upload </button>
+
+<!-- Ajax to Java File Upload Logic -->
+<script>
+    async function uploadFile() {
+        var formData = new FormData();
+        formData.append("inputFile", ajaxfile.files[0]);
+        await fetch('/upload', {
+            method: "POST",
+            body: formData
+        });
+        alert('The file upload with Ajax and Java was a success!');
+    }
+</script>
+</body>
+</html>
