@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
@@ -34,9 +35,10 @@ public class TastAsync extends BaseTest {
     }
 
     @Test
-    public void testAsyncAnnotationForMethodsWithConfiguredExecutor() {
+    public void testAsyncAnnotationForMethodsWithConfiguredExecutor() throws ExecutionException, InterruptedException {
         System.out.println("Start - invoking an asynchronous method. ");
-        asyncComponent.asyncMethodWithConfiguredExecutor();
+        CompletableFuture<String> product1 = asyncComponent.asyncMethodWithConfiguredExecutor();
+        String content = product1.get();
         System.out.println("End - invoking an asynchronous method. ");
     }
 }

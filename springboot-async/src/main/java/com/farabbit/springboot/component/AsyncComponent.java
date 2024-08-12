@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Component;
+
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 
 /**
@@ -29,12 +31,13 @@ public class AsyncComponent {
     }
 
     @Async("threadPoolTaskExecutor")
-    public void asyncMethodWithConfiguredExecutor() {
+    public CompletableFuture<String> asyncMethodWithConfiguredExecutor() {
         System.out.println("Execute method asynchronously with configured executor " + Thread.currentThread().getName());
         try {
             Thread.sleep(5000);
         } catch (final InterruptedException e) {
 
         }
+        return CompletableFuture.completedFuture("[Just for test..");
     }
 }
