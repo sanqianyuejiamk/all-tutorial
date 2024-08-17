@@ -51,6 +51,8 @@ public class InstructorController {
 			@Valid @RequestBody Instructor userDetails) throws ResourceNotFoundException {
 		Instructor user = instructorRepository.findById(instructorId)
 		        .orElseThrow(() -> new ResourceNotFoundException("Instructor not found :: " + instructorId));
+		user.setFirstName(userDetails.getFirstName());
+		user.setLastName(userDetails.getLastName());
 		user.setEmail(userDetails.getEmail());
 		user.setInstructorDetail(userDetails.getInstructorDetail());
 		final Instructor updatedUser = instructorRepository.save(user);

@@ -24,7 +24,7 @@ public class SpringRestClient {
     @Test
     public void updateInstructor_01(){
         Map<String, String> params = new HashMap<String, String>();
-        params.put("id", "1");
+        params.put("id", "8");
         Instructor updatedEmployee = new Instructor("admin123", "admin123", "admin123@gmail.com");
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.put(UPDATE_EMPLOYEE_ENDPOINT_URL, updatedEmployee, params);
@@ -50,16 +50,16 @@ public class SpringRestClient {
 
         // request body parameters
         Map<String, Object> map = new HashMap<>();
-        map.put("id", 3);
+        map.put("id", 7);
         map.put("firstName", "Spring Boot 101");
         map.put("lastName", "A powerful tool for building web apps.");
         map.put("email", "xf123@gmail.com");
 
-//        Map<String, Object> detailMap = new HashMap<>();
-//        detailMap.put("id",103L);
-//        detailMap.put("youtubeChannel","111");
-//        detailMap.put("hobby","222");
-//        map.put("instructorDetail", detailMap);
+        Map<String, Object> detailMap = new HashMap<>();
+        detailMap.put("id",103L);
+        detailMap.put("youtubeChannel","111");
+        detailMap.put("hobby","222");
+        map.put("instructorDetail", detailMap);
 
         // build the request
         HttpEntity<Map<String, Object>> entity = new HttpEntity<>(map, headers);
@@ -80,13 +80,15 @@ public class SpringRestClient {
     @Test
     public void getInstructorById_01(){
         Map<String, String> params = new HashMap<String, String>();
-        params.put("id", "2");
+        params.put("id", "7");
 
         RestTemplate restTemplate = new RestTemplate();
         Instructor updateInstructor = restTemplate.getForObject(GET_EMPLOYEE_ENDPOINT_URL, Instructor.class, params);
 
         System.out.println(updateInstructor);
 
+        updateInstructor.setFirstName("admin123");
+        updateInstructor.setLastName("admin123");
         updateInstructor.setEmail("mengka@163.com");
         updateInstructor.getInstructorDetail().setYoutubeChannel("123456789");
         restTemplate.put(UPDATE_EMPLOYEE_ENDPOINT_URL, updateInstructor, params);

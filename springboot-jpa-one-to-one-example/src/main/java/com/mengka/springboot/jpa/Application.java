@@ -1,6 +1,7 @@
 package com.mengka.springboot.jpa;
 
 import com.mengka.springboot.jpa.model.Instructor;
+import com.mengka.springboot.jpa.model.InstructorDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,10 +24,10 @@ public class Application implements CommandLineRunner {
 
 		Instructor instructor = new Instructor("Ramesh", "Fadatare", "ramesh@gmail.com");
 
-//		InstructorDetail instructorDetail = new InstructorDetail("Java Guides", "Cricket Playing");
+		InstructorDetail instructorDetail = new InstructorDetail("Java Guides", "Cricket Playing");
 //		instructorDetail.setId(100L);
-//		// associate the objects
-//		instructor.setInstructorDetail(instructorDetail);
+		// associate the objects
+		instructor.setInstructorDetail(instructorDetail);
 
 		instructorRepository.save(instructor);
 	}
