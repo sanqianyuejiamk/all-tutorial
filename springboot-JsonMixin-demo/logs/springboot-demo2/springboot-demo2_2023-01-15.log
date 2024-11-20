@@ -1,0 +1,200 @@
+[2023-01-15 21:55:51,495] [main] [INFO] - c.f.s.Demo2Application 50 Starting Demo2Application on MacBook.local with PID 40793 (/Users/hyy044101331/2023_farabbit/all-tutorial/springboot-JsonMixin-demo/target/classes started by hyy044101331 in /Users/hyy044101331/2023_farabbit/all-tutorial/springboot-JsonMixin-demo)
+[2023-01-15 21:55:51,500] [main] [INFO] - c.f.s.Demo2Application 675 No active profile set, falling back to default profiles: default
+[2023-01-15 21:55:52,552] [main] [INFO] - o.s.d.r.c.RepositoryConfigurationDelegate 126 Bootstrapping Spring Data repositories in DEFAULT mode.
+[2023-01-15 21:55:52,661] [main] [INFO] - o.s.d.r.c.RepositoryConfigurationDelegate 182 Finished Spring Data repository scanning in 96ms. Found 1 repository interfaces.
+[2023-01-15 21:55:53,222] [main] [INFO] - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330 Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b8dec193] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2023-01-15 21:55:53,251] [main] [INFO] - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330 Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$385f0ec5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2023-01-15 21:55:53,776] [main] [INFO] - o.s.b.w.e.t.TomcatWebServer 90 Tomcat initialized with port(s): 8071 (http)
+[2023-01-15 21:55:53,796] [main] [INFO] - o.a.c.h.Http11NioProtocol 173 Initializing ProtocolHandler ["http-nio-8071"]
+[2023-01-15 21:55:53,811] [main] [INFO] - o.a.c.c.StandardService 173 Starting service [Tomcat]
+[2023-01-15 21:55:53,812] [main] [INFO] - o.a.c.c.StandardEngine 173 Starting Servlet Engine: Apache Tomcat/9.0.13
+[2023-01-15 21:55:53,824] [main] [INFO] - o.a.c.c.AprLifecycleListener 173 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/hyy044101331/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2023-01-15 21:55:54,013] [main] [INFO] - o.a.c.c.C.[.[.[/] 173 Initializing Spring embedded WebApplicationContext
+[2023-01-15 21:55:54,013] [main] [INFO] - o.s.w.c.ContextLoader 296 Root WebApplicationContext: initialization completed in 2458 ms
+[2023-01-15 21:55:54,442] [main] [INFO] - c.z.h.HikariDataSource 95 HikariPool-1 - Starting...
+[2023-01-15 21:55:55,005] [main] [INFO] - c.z.h.HikariDataSource 107 HikariPool-1 - Start completed.
+[2023-01-15 21:55:55,230] [main] [INFO] - o.h.j.i.u.LogHelper 31 HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2023-01-15 21:55:55,407] [main] [INFO] - o.h.Version 46 HHH000412: Hibernate Core {5.3.7.Final}
+[2023-01-15 21:55:55,410] [main] [INFO] - o.h.c.Environment 213 HHH000206: hibernate.properties not found
+[2023-01-15 21:55:55,663] [main] [INFO] - o.h.a.c.Version 49 HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[2023-01-15 21:55:55,874] [main] [INFO] - o.h.d.Dialect 157 HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2023-01-15 21:55:56,736] [main] [INFO] - o.s.o.j.LocalContainerEntityManagerFactoryBean 415 Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-01-15 21:55:57,952] [main] [INFO] - o.s.s.c.ThreadPoolTaskExecutor 171 Initializing ExecutorService 'applicationTaskExecutor'
+[2023-01-15 21:55:58,052] [main] [WARN] - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration 234 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-01-15 21:55:58,774] [main] [INFO] - o.a.c.h.Http11NioProtocol 173 Starting ProtocolHandler ["http-nio-8071"]
+[2023-01-15 21:55:58,799] [main] [INFO] - o.a.t.u.n.NioSelectorPool 173 Using a shared selector for servlet write/read
+[2023-01-15 21:55:58,817] [main] [INFO] - o.s.b.w.e.t.TomcatWebServer 204 Tomcat started on port(s): 8071 (http) with context path ''
+[2023-01-15 21:55:58,821] [main] [INFO] - c.f.s.Demo2Application 59 Started Demo2Application in 7.876 seconds (JVM running for 10.253)
+[2023-01-15 21:55:58,824] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 28 DATASOURCE = HikariDataSource (HikariPool-1)
+[2023-01-15 21:55:58,824] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 30 Display all customers...
+[2023-01-15 21:55:58,903] [main] [INFO] - o.h.h.i.QueryTranslatorFactoryInitiator 47 HHH000397: Using ASTQueryTranslatorFactory
+[2023-01-15 21:55:59,188] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":1,"title":"title222","content":"test122"}
+[2023-01-15 21:55:59,188] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":2,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,189] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":3,"title":"title222","content":"content333"}
+[2023-01-15 21:55:59,189] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":4,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,189] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":5,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,190] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":6,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,190] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":7,"title":"第7篇测试文章","content":"您还没有关注任何内容，赶快点击添加吧！"}
+[2023-01-15 21:55:59,190] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":8,"title":"第8篇测试文章","content":"您还没有关注任何内容，赶快点击添加吧！"}
+[2023-01-15 21:55:59,191] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":10,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,191] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":11,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,191] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":12,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,192] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":13,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,192] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":14,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,192] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":15,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,192] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":16,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,193] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":17,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,193] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":18,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,193] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":19,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,194] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":20,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,194] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":21,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,194] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":22,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,194] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":23,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,195] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":24,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,195] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":25,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,195] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":26,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,195] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":27,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,196] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":28,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,196] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":29,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,196] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":30,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,197] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":31,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,197] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":32,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,197] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":33,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,197] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":34,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,198] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":35,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,198] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":36,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 21:55:59,198] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":40,"title":"TestEmail","content":"TestWebpage"}
+[2023-01-15 22:01:04,771] [Thread-19] [INFO] - o.s.s.c.ThreadPoolTaskExecutor 208 Shutting down ExecutorService 'applicationTaskExecutor'
+[2023-01-15 22:01:04,777] [Thread-19] [INFO] - o.s.o.j.LocalContainerEntityManagerFactoryBean 597 Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-01-15 22:01:04,789] [Thread-19] [INFO] - c.z.h.HikariDataSource 317 HikariPool-1 - Shutdown initiated...
+[2023-01-15 22:01:04,800] [Thread-19] [INFO] - c.z.h.HikariDataSource 319 HikariPool-1 - Shutdown completed.
+[2023-01-15 22:01:13,014] [main] [INFO] - c.f.s.Demo2Application 50 Starting Demo2Application on MacBook.local with PID 41315 (/Users/hyy044101331/2023_farabbit/all-tutorial/springboot-JsonMixin-demo/target/classes started by hyy044101331 in /Users/hyy044101331/2023_farabbit/all-tutorial/springboot-JsonMixin-demo)
+[2023-01-15 22:01:13,019] [main] [INFO] - c.f.s.Demo2Application 675 No active profile set, falling back to default profiles: default
+[2023-01-15 22:01:13,980] [main] [INFO] - o.s.d.r.c.RepositoryConfigurationDelegate 126 Bootstrapping Spring Data repositories in DEFAULT mode.
+[2023-01-15 22:01:14,070] [main] [INFO] - o.s.d.r.c.RepositoryConfigurationDelegate 182 Finished Spring Data repository scanning in 74ms. Found 1 repository interfaces.
+[2023-01-15 22:01:14,534] [main] [INFO] - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330 Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ec9aa60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2023-01-15 22:01:14,558] [main] [INFO] - o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330 Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$fe49f792] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2023-01-15 22:01:14,989] [main] [INFO] - o.s.b.w.e.t.TomcatWebServer 90 Tomcat initialized with port(s): 8071 (http)
+[2023-01-15 22:01:15,005] [main] [INFO] - o.a.c.h.Http11NioProtocol 173 Initializing ProtocolHandler ["http-nio-8071"]
+[2023-01-15 22:01:15,017] [main] [INFO] - o.a.c.c.StandardService 173 Starting service [Tomcat]
+[2023-01-15 22:01:15,018] [main] [INFO] - o.a.c.c.StandardEngine 173 Starting Servlet Engine: Apache Tomcat/9.0.13
+[2023-01-15 22:01:15,025] [main] [INFO] - o.a.c.c.AprLifecycleListener 173 The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/hyy044101331/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2023-01-15 22:01:15,130] [main] [INFO] - o.a.c.c.C.[.[.[/] 173 Initializing Spring embedded WebApplicationContext
+[2023-01-15 22:01:15,131] [main] [INFO] - o.s.w.c.ContextLoader 296 Root WebApplicationContext: initialization completed in 2056 ms
+[2023-01-15 22:01:15,466] [main] [INFO] - c.z.h.HikariDataSource 95 HikariPool-1 - Starting...
+[2023-01-15 22:01:15,773] [main] [INFO] - c.z.h.HikariDataSource 107 HikariPool-1 - Start completed.
+[2023-01-15 22:01:15,850] [main] [INFO] - o.h.j.i.u.LogHelper 31 HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2023-01-15 22:01:15,919] [main] [INFO] - o.h.Version 46 HHH000412: Hibernate Core {5.3.7.Final}
+[2023-01-15 22:01:15,920] [main] [INFO] - o.h.c.Environment 213 HHH000206: hibernate.properties not found
+[2023-01-15 22:01:16,108] [main] [INFO] - o.h.a.c.Version 49 HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[2023-01-15 22:01:16,311] [main] [INFO] - o.h.d.Dialect 157 HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2023-01-15 22:01:16,939] [main] [INFO] - o.s.o.j.LocalContainerEntityManagerFactoryBean 415 Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-01-15 22:01:18,180] [main] [INFO] - o.s.s.c.ThreadPoolTaskExecutor 171 Initializing ExecutorService 'applicationTaskExecutor'
+[2023-01-15 22:01:18,284] [main] [WARN] - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration 234 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-01-15 22:01:19,054] [main] [INFO] - o.a.c.h.Http11NioProtocol 173 Starting ProtocolHandler ["http-nio-8071"]
+[2023-01-15 22:01:19,080] [main] [INFO] - o.a.t.u.n.NioSelectorPool 173 Using a shared selector for servlet write/read
+[2023-01-15 22:01:19,108] [main] [INFO] - o.s.b.w.e.t.TomcatWebServer 204 Tomcat started on port(s): 8071 (http) with context path ''
+[2023-01-15 22:01:19,112] [main] [INFO] - c.f.s.Demo2Application 59 Started Demo2Application in 6.739 seconds (JVM running for 7.95)
+[2023-01-15 22:01:19,115] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 28 DATASOURCE = HikariDataSource (HikariPool-1)
+[2023-01-15 22:01:19,115] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 30 Display all customers...
+[2023-01-15 22:01:19,194] [main] [INFO] - o.h.h.i.QueryTranslatorFactoryInitiator 47 HHH000397: Using ASTQueryTranslatorFactory
+[2023-01-15 22:01:19,397] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":1,"title":"title222","content":"test122"}
+[2023-01-15 22:01:19,398] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":2,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,398] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":3,"title":"title222","content":"content333"}
+[2023-01-15 22:01:19,398] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":4,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,399] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":5,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,399] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":6,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,399] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":7,"title":"第7篇测试文章","content":"您还没有关注任何内容，赶快点击添加吧！"}
+[2023-01-15 22:01:19,400] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":8,"title":"第8篇测试文章","content":"您还没有关注任何内容，赶快点击添加吧！"}
+[2023-01-15 22:01:19,400] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":10,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,400] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":11,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,401] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":12,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,401] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":13,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,401] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":14,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,401] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":15,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,402] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":16,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,402] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":17,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,402] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":18,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,403] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":19,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,403] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":20,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,403] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":21,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,403] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":22,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,404] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":23,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,404] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":24,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,404] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":25,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,405] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":26,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,405] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":27,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,405] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":28,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,406] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":29,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,406] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":30,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,406] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":31,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,407] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":32,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,407] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":33,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,408] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":34,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,409] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":35,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,410] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":36,"title":"\"title222\"","content":"\"content333\""}
+[2023-01-15 22:01:19,410] [main] [INFO] - c.f.s.c.ApplicationStartupRunner 42 noteJson = {"id":40,"title":"TestEmail","content":"TestWebpage"}
+[2023-01-15 22:01:45,679] [http-nio-8071-exec-1] [INFO] - o.a.c.c.C.[.[.[/] 173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-01-15 22:01:45,680] [http-nio-8071-exec-1] [INFO] - o.s.w.s.DispatcherServlet 524 Initializing Servlet 'dispatcherServlet'
+[2023-01-15 22:01:45,714] [http-nio-8071-exec-1] [INFO] - o.s.w.s.DispatcherServlet 546 Completed initialization in 34 ms
+[2023-01-15 22:05:35,946] [Thread-16] [INFO] - o.s.s.c.ThreadPoolTaskExecutor 208 Shutting down ExecutorService 'applicationTaskExecutor'
+[2023-01-15 22:05:35,964] [Thread-16] [INFO] - o.s.o.j.LocalContainerEntityManagerFactoryBean 597 Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-01-15 22:05:35,988] [Thread-16] [INFO] - c.z.h.HikariDataSource 317 HikariPool-1 - Shutdown initiated...
+[2023-01-15 22:05:36,000] [Thread-16] [INFO] - c.z.h.HikariDataSource 319 HikariPool-1 - Shutdown completed.
+[2023-01-15 22:12:19,804] [main] [INFO] - c.f.s.Demo2Application 55 Starting Demo2Application using Java 1.8.0_40 on MacBook.local with PID 42289 (/Users/hyy044101331/2023_farabbit/all-tutorial/springboot-JsonMixin-demo/target/classes started by hyy044101331 in /Users/hyy044101331/2023_farabbit/all-tutorial/springboot-JsonMixin-demo)
+[2023-01-15 22:12:19,809] [main] [INFO] - c.f.s.Demo2Application 634 No active profile set, falling back to 1 default profile: "default"
+[2023-01-15 22:12:20,685] [main] [INFO] - o.s.d.r.c.RepositoryConfigurationDelegate 132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-01-15 22:12:20,748] [main] [INFO] - o.s.d.r.c.RepositoryConfigurationDelegate 201 Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interfaces.
+[2023-01-15 22:12:21,581] [main] [INFO] - o.s.b.w.e.t.TomcatWebServer 108 Tomcat initialized with port(s): 8071 (http)
+[2023-01-15 22:12:21,595] [main] [INFO] - o.a.c.h.Http11NioProtocol 173 Initializing ProtocolHandler ["http-nio-8071"]
+[2023-01-15 22:12:21,596] [main] [INFO] - o.a.c.c.StandardService 173 Starting service [Tomcat]
+[2023-01-15 22:12:21,596] [main] [INFO] - o.a.c.c.StandardEngine 173 Starting Servlet engine: [Apache Tomcat/9.0.65]
+[2023-01-15 22:12:21,830] [main] [INFO] - o.a.c.c.C.[.[.[/] 173 Initializing Spring embedded WebApplicationContext
+[2023-01-15 22:12:21,830] [main] [INFO] - o.s.b.w.s.c.ServletWebServerApplicationContext 292 Root WebApplicationContext: initialization completed in 1953 ms
+[2023-01-15 22:12:22,120] [main] [INFO] - c.z.h.HikariDataSource 95 HikariPool-1 - Starting...
+[2023-01-15 22:12:22,486] [main] [INFO] - c.z.h.HikariDataSource 107 HikariPool-1 - Start completed.
+[2023-01-15 22:12:22,549] [main] [INFO] - o.h.j.i.u.LogHelper 31 HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-01-15 22:12:22,610] [main] [INFO] - o.h.Version 44 HHH000412: Hibernate ORM core version 5.6.11.Final
+[2023-01-15 22:12:22,860] [main] [INFO] - o.h.a.c.Version 56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-01-15 22:12:22,998] [main] [INFO] - o.h.d.Dialect 175 HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+[2023-01-15 22:12:23,700] [main] [INFO] - o.h.e.t.j.p.i.JtaPlatformInitiator 52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-01-15 22:12:23,716] [main] [INFO] - o.s.o.j.LocalContainerEntityManagerFactoryBean 437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-01-15 22:12:24,163] [main] [WARN] - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration 219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-01-15 22:12:25,508] [main] [INFO] - o.a.c.h.Http11NioProtocol 173 Starting ProtocolHandler ["http-nio-8071"]
+[2023-01-15 22:12:25,548] [main] [INFO] - o.s.b.w.e.t.TomcatWebServer 220 Tomcat started on port(s): 8071 (http) with context path ''
+[2023-01-15 22:12:25,561] [main] [INFO] - c.f.s.Demo2Application 61 Started Demo2Application in 6.335 seconds (JVM running for 7.629)
+[2023-01-15 22:12:29,746] [http-nio-8071-exec-1] [INFO] - o.a.c.c.C.[.[.[/] 173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-01-15 22:12:29,747] [http-nio-8071-exec-1] [INFO] - o.s.w.s.DispatcherServlet 525 Initializing Servlet 'dispatcherServlet'
+[2023-01-15 22:12:29,748] [http-nio-8071-exec-1] [INFO] - o.s.w.s.DispatcherServlet 547 Completed initialization in 1 ms
+[2023-01-15 22:12:37,633] [SpringApplicationShutdownHook] [INFO] - o.s.o.j.LocalContainerEntityManagerFactoryBean 651 Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-01-15 22:12:37,635] [SpringApplicationShutdownHook] [INFO] - c.z.h.HikariDataSource 317 HikariPool-1 - Shutdown initiated...
+[2023-01-15 22:12:37,639] [SpringApplicationShutdownHook] [INFO] - c.z.h.HikariDataSource 319 HikariPool-1 - Shutdown completed.
+[2023-01-15 22:12:44,555] [main] [INFO] - c.f.s.Demo2Application 55 Starting Demo2Application using Java 1.8.0_40 on MacBook.local with PID 42322 (/Users/hyy044101331/2023_farabbit/all-tutorial/springboot-JsonMixin-demo/target/classes started by hyy044101331 in /Users/hyy044101331/2023_farabbit/all-tutorial/springboot-JsonMixin-demo)
+[2023-01-15 22:12:44,561] [main] [INFO] - c.f.s.Demo2Application 634 No active profile set, falling back to 1 default profile: "default"
+[2023-01-15 22:12:45,500] [main] [INFO] - o.s.d.r.c.RepositoryConfigurationDelegate 132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-01-15 22:12:45,563] [main] [INFO] - o.s.d.r.c.RepositoryConfigurationDelegate 201 Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interfaces.
+[2023-01-15 22:12:47,089] [main] [INFO] - o.s.b.w.e.t.TomcatWebServer 108 Tomcat initialized with port(s): 8071 (http)
+[2023-01-15 22:12:47,118] [main] [INFO] - o.a.c.h.Http11NioProtocol 173 Initializing ProtocolHandler ["http-nio-8071"]
+[2023-01-15 22:12:47,119] [main] [INFO] - o.a.c.c.StandardService 173 Starting service [Tomcat]
+[2023-01-15 22:12:47,120] [main] [INFO] - o.a.c.c.StandardEngine 173 Starting Servlet engine: [Apache Tomcat/9.0.65]
+[2023-01-15 22:12:47,472] [main] [INFO] - o.a.c.c.C.[.[.[/] 173 Initializing Spring embedded WebApplicationContext
+[2023-01-15 22:12:47,472] [main] [INFO] - o.s.b.w.s.c.ServletWebServerApplicationContext 292 Root WebApplicationContext: initialization completed in 2799 ms
+[2023-01-15 22:12:47,846] [main] [INFO] - c.z.h.HikariDataSource 95 HikariPool-1 - Starting...
+[2023-01-15 22:12:48,178] [main] [INFO] - c.z.h.HikariDataSource 107 HikariPool-1 - Start completed.
+[2023-01-15 22:12:48,233] [main] [INFO] - o.h.j.i.u.LogHelper 31 HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-01-15 22:12:48,283] [main] [INFO] - o.h.Version 44 HHH000412: Hibernate ORM core version 5.6.11.Final
+[2023-01-15 22:12:48,465] [main] [INFO] - o.h.a.c.Version 56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-01-15 22:12:48,650] [main] [INFO] - o.h.d.Dialect 175 HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+[2023-01-15 22:12:49,477] [main] [INFO] - o.h.e.t.j.p.i.JtaPlatformInitiator 52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-01-15 22:12:49,509] [main] [INFO] - o.s.o.j.LocalContainerEntityManagerFactoryBean 437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-01-15 22:12:49,940] [main] [WARN] - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration 219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-01-15 22:12:51,581] [main] [INFO] - o.a.c.h.Http11NioProtocol 173 Starting ProtocolHandler ["http-nio-8071"]
+[2023-01-15 22:12:51,631] [main] [INFO] - o.s.b.w.e.t.TomcatWebServer 220 Tomcat started on port(s): 8071 (http) with context path ''
+[2023-01-15 22:12:51,654] [main] [INFO] - c.f.s.Demo2Application 61 Started Demo2Application in 7.732 seconds (JVM running for 8.802)
+[2023-01-15 22:12:59,310] [http-nio-8071-exec-1] [INFO] - o.a.c.c.C.[.[.[/] 173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-01-15 22:12:59,310] [http-nio-8071-exec-1] [INFO] - o.s.w.s.DispatcherServlet 525 Initializing Servlet 'dispatcherServlet'
+[2023-01-15 22:12:59,312] [http-nio-8071-exec-1] [INFO] - o.s.w.s.DispatcherServlet 547 Completed initialization in 1 ms
