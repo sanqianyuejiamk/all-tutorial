@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: crud-demo
+  
+  # MySQL数据库配置（生产环境示例）
+  datasource:
+    url: jdbc:mysql://localhost:3306/crud_demo?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: your_password
+    # HikariCP 连接池配置（生产环境）
+    hikari:
+      pool-name: HikariCP-Production
+      # 生产环境建议配置
+      minimum-idle: 10
+      maximum-pool-size: 50
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      connection-test-query: SELECT 1
+      auto-commit: false
+      # 生产环境建议启用连接泄漏检测
+      leak-detection-threshold: 60000
+      initialization-fail-timeout: 1
+      validate-on-return: false
+      validate-on-borrow: false
+      # 连接池注册JMX
+      register-mbeans: true
+  
+  # JPA配置
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+        # 生产环境关闭SQL日志
+        use_sql_comments: false
+
+# 服务器配置
+server:
+  port: 8080
+
+# 日志配置
+logging:
+  level:
+    com.example.cruddemo: INFO
+    org.springframework.web: WARN
+    com.zaxxer.hikari: INFO
+
